@@ -299,7 +299,7 @@ input {
 #about .container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
 }
 
 #about .about-info {
@@ -327,6 +327,7 @@ input {
     line-height: 1.3em;
     font-size: 0.9vw;
     letter-spacing: 0.05em;
+    word-break: keep-all;
 }
 
 .video {
@@ -821,6 +822,14 @@ iframe {
 
 @media (min-width: 2601px) {
 
+title {
+    margin: 0 auto max(10vh, 20pt) auto;
+}
+
+#about title {
+    margin: max(10vh, 20pt) auto;
+}
+
 #tracklist li {
     font-size: 0.8vw;
 }
@@ -852,6 +861,13 @@ iframe {
 
 @media (min-width: 2001px) and (max-width: 2600px) {
 
+title {
+    margin: 0 auto max(10vh, 20pt) auto;
+}
+
+#about title {
+    margin: max(10vh, 20pt) auto;
+}
 
 header {
     font-size: 0.8vw;
@@ -872,8 +888,7 @@ header {
     -webkit-user-select: none;
 }
 
-#tracklist li {
-    margin: 0 16pt;
+#tracklist {
     font-size: 16pt;
 }
 
@@ -905,6 +920,13 @@ header {
 
 #tracklist li {
     font-size: 10pt;
+}
+
+
+#about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
 }
 
 /*
