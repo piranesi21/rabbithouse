@@ -437,7 +437,7 @@ iframe {
     font-size: 5vmin;
 }
 
-#info main {
+#info #container {
     display: inline-block;
     vertical-align: bottom;
 }
@@ -1185,7 +1185,7 @@ input {
     font-size: max(15pt,6vw);
 }
 
-#info main {
+#info #container {
     display: inline;
     text-align: center;
 }
