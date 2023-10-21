@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Poppins:400,600,700|Playfair+Display:400,700|M+PLUS+1:400,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Neuton:200,400,700|Neuton:400,600,700|Playfair+Display:400,600|Zen+Kaku+Gothic+New:300,500,700&display=swap);
 
 /* Reset */
 
@@ -80,7 +80,9 @@ html {
 }
 
 body {
-    background: #404060;
+    background: url(images/background-texture.jpg) repeat center center;
+    background-size: 300px auto;
+    background-attachment: fixed;
 }
 
 a,
@@ -101,7 +103,7 @@ a:before {
 loading {
     position: fixed;
     display: block;
-    background: #404060;
+    background: #19102d;
     top: 0;
     left: 0;
     height: 100%;
@@ -115,11 +117,10 @@ loading {
     transform: translateX(-50%) translateY(-50%);
     position: fixed;
     z-index: 100001;
-    width: min(30vw, 20vh);
+    width: 40vmin;
     height: auto;
     transition: transform 0.5s ease;
 }
-
 
 .mobile{
     display: none;
@@ -132,10 +133,10 @@ loading {
 
 .hypereffect:before {
     left: 0;
-    top: 4.6em;
+    top: 4.8em;
     width: calc(100% - 1.8em);
     background: #fff;
-    height: 3px;
+    height: 1px;
 
     transform: translateX(-105%);
     transition: transform 0.3s ease-out, top 0.5s linear, height 0.5s linear;
@@ -147,19 +148,21 @@ loading {
 }
 
 .outbanner-effect:before {
-    top: 3em !important;
-    height: 2px !important;
+    top: 3.2em !important;
+    height: 0.5px !important;
 }
 
 title {
+    background-color: #fff;
     display: inline-block;
-    font-family: 'Playfair Display';
+    font-family: 'Neuton';
     font-weight: 700;
-    color: #fff;
-    font-size: 4vmin;
+    color: #000;
+    font-size: 3vmin;
+    padding: 0.5em 1em;
+    width: 70vw;
     margin: 20pt auto;
-    letter-spacing: min(2vw, 1em);
-    margin-left: min(2vw, 1em);
+    text-align: left;
 }
 
 /* Header */
@@ -172,7 +175,7 @@ header {
     font-size: 1.5vh;
     line-height: 8em;
     z-index: 10000;
-    background: linear-gradient(to bottom, #404060, rgba(0,0,0,0));
+    background: linear-gradient(to bottom, #19102d, rgba(0,0,0,0));
 
     user-select: none;
     transition: 0.5s linear;
@@ -209,7 +212,7 @@ header span::after {
 
 header span {
     top: 0;
-    font-family: 'Poppins';
+    font-family: 'Playfair Display';
     font-style: normal;
     font-weight: 700;
 }
@@ -254,7 +257,7 @@ input {
 
 #banner {
     position: absolute;
-    background: url(images/background.jpg) no-repeat;
+    background: #19102d url(images/background.jpg) no-repeat;
     background-position: center bottom;
     background-size: auto 100%;
     height: 100vh;
@@ -271,64 +274,46 @@ input {
     -webkit-user-select: none;
 }
 
-#aki-logo {
+#album-title {
     display: block;
     position: absolute;
-    width: 8em;
+    width: 25em;
     height: auto;
-    top: 50%;
-    right: 7vmin;
-    transform: translateY(-50%);
-}
-
-#banner .container {
-    position: absolute;
-    top: 50%;
-    left: 7vmin;
-    transform: translateY(-50%);
-}
-
-#banner sub {
-    display: inline-block;
-    font-family: 'Poppins';
-    font-weight: 600;
-    font-size: 1em;
-    color: #DD66AA;
-}
-
-#banner title {
-    font-size: 1.5em;
-    letter-spacing: normal;
-    margin: 0;
+    bottom: 8vmin;
+    left: 8vmin;
 }
 
 /* About */
 
 #about {
     display: inline-block;
-    background: none;
+    background: linear-gradient(to bottom, #19102d, rgba(0,0,0,0));
     list-style-type: none;
-    padding: 5vw 5vw 5vw 5vw;
-    min-height: 100vmin;
-    height: auto;
+    padding: 8vw 15vw 5vw 15vw;
+    min-height: 100vh;
     width: 100%;
     text-align: center;
     margin-top: 100vh;
 }
 
+#about .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
 #about .about-info {
-    margin-top: 2rem;
+    display: inline-block;
+    margin-left: 0;
+    width: 25vw;
     box-sizing: border-box;
     position: relative;
-    height: calc(35vw/1.777777777 - 2rem);
-    margin-right: -10pt;
 }
 
 #catchphrase {
-    width: 70vw;
     display: inline-block;
-    fill: #DD66AA;
-    transform: translateY(-30pt);
+    z-index: 1000 !important;
+    width: 25vw;
 }
 
 #about h2 {
@@ -336,7 +321,7 @@ input {
     display: inline-block;
     bottom: 14pt;
     color: #fff;
-    font-family: 'M PLUS 1';
+    font-family: 'ZEN KAKU GOTHIC NEW';
     font-weight: 400;
     font-style: normal;
     line-height: 1.3em;
@@ -346,10 +331,10 @@ input {
 
 .video {
     position: relative;
-    display: inline-block;
+    display: block;
     width: 40vw;
     height: calc(40vw/1.777777777);
-    z-index: 100;
+    z-index: 1;
 }
 
 iframe {
@@ -366,15 +351,10 @@ iframe {
     display: inline-block;
     background: none;
     list-style-type: none;
-    padding: 5vw 5vw 5vw 5vw;
-    min-height: 50vmin;
+    padding: 5vw 15vw 5vw 15vw;
     height: auto;
     width: 100%;
     text-align: center;
-}
-
-#tracklist title{
-    margin-bottom: 10vh;
 }
 
 .tracks {
@@ -383,73 +363,64 @@ iframe {
     vertical-align: top;
 }
 
-#tracklist li {
-    display: table;
-    vertical-align: top;
-    height: 5em;
-    min-height: 2em;
-    word-break: break-all;
-    margin: 0 1em;
-    font-size: 20pt;
-}
-
-#tracklist h1 {
-    display: table-cell;
-    font-family: 'Poppins';
-    font-weight: 700;
-    vertical-align: middle;
-    text-align: center;
-    font-size: 1em;
-    color: #DD66AA;
-    width: 5vw;
-}
-
-#tracklist h2 {
-    display: table-cell;
-    text-align: left;
-    vertical-align: middle;
-    padding-left: 1em;
-    line-height: 1.4em;
-    width: 20vw;
-}
-
 #tracklist i {
-    font-family: 'Poppins';
+    font-family: 'Neuton';
     display: inline-block;
-    font-weight: 600;
+    font-weight: 700;
     color: #fff;
     font-size: 1.2em;
 }
 
-#tracklist li p {
-    display: flex;
-    justify-content: space-between;
-    width: max(30pt, 23vw);
+#tracklist sup {
+    display: inline-block;
+    font-family: 'ZEN KAKU GOTHIC NEW';
+    font-style: italic;
+    font-weight: 200;
+    color: #fff;
+    font-size: 0.8em;
+    padding-top: 0.2em;
 }
 
 #tracklist sub {
     display: inline-block;
-    font-family: 'M PLUS 1';
-    font-style: normal;
-    font-weight: 600;
-    color: #DD66AA;
-    font-size: 0.8em;
-}
-
-#tracklist sup {
-    display: inline-block;
-    font-family: 'M PLUS 1';
-    font-style: normal;
-    font-weight: 400;
-    color: #fff;
-    font-size: 0.8em;
+    font-family: 'Neuton';
+    font-weight: 700;
+    color: #DDBCAB;
+    font-size: 1em;
+    padding-top: 0.2em;
+    text-align: right;
+    min-width: 25vw;
 }
 
 #tracklist em {
-    font-family: 'Poppins';
+    font-family: 'ZEN KAKU GOTHIC NEW';
+    color: #fff;
     font-weight: 300;
-    font-size: 0.8em;
+    font-size: 0.9em;
     line-height: 0.4em;
+    transform: translateY(0.1em);
+}
+
+#tracklist fieldset {
+    border: none;
+    color: #DDBCAB;
+    text-align: center;
+    min-width: 25vw;
+    padding: 0.3em 2em 1em 2em;
+    margin-top: 1em;
+}
+
+#tracklist .last {
+    border: 2px solid #DDBCAB;
+}
+
+#tracklist legend {
+    font-family: 'Playfair Display';
+    font-weight: 600;
+    font-variant-numeric: lining-nums;
+    color: #DDBCAB;
+    padding: 0 1em 0.2em 1em;
+    font-size: 1.2em;
 }
 
 /* Information */
@@ -457,8 +428,7 @@ iframe {
 #info {
     background: none;
     list-style-type: none;
-    padding: 5vmin 20vw 0 20vw;
-    min-height: 50vmin;
+    padding: 5vmin 15vw 0 15vw;
     height: auto;
     text-align: center;
 }
@@ -468,8 +438,9 @@ iframe {
     vertical-align: bottom;
 }
 
-#info title {
-    margin-bottom: 10vh;
+#info #album-logo {
+    width: 35vw;
+    height: auto;
 }
 
 #info li{
@@ -483,15 +454,16 @@ iframe {
     align-items: flex-end;
     height: max(17vw, 400px);
     align-content: end;
+    width: 38vw;
 }
 
 #info .field {
     text-align: left;
-    margin-right: 2vw;
+    margin-right: 3vw;
 }
 
 #info h1 {
-    font-family: 'Poppins';
+    font-family: 'Neuton';
     font-weight: 600;
     color: #DD66AA;
     font-size: 0.8vmax;
@@ -507,8 +479,8 @@ iframe {
 
 #info h2 {
     display: inline-block;
-    font-family: 'Poppins';
-    font-weight: 600;
+    font-family: 'Zen Kaku Gothic New';
+    font-weight: 700;
     color: #fff;
     font-size: 2vmax;
     line-height: 1.3em;
@@ -516,7 +488,7 @@ iframe {
 }
 
 #info h3 {
-    font-family: 'M PLUS 1';
+    font-family: 'ZEN KAKU GOTHIC NEW';
     color: #fff;
     font-weight: 700;
     font-size: 2vmax;
@@ -535,19 +507,19 @@ iframe {
 
 #info .store-button{
     display: flex;
-    justify-content: space-around;
-    width: 61vw;
+    justify-content: space-between;
+    width: 70vw;
 }
 
 .sitebutton {
     display: inline-block;
 
     font-size: 12pt;
-    font-family: 'Poppins';
-    font-weight: 600;
+    font-family: 'Zen Kaku Gothic New';
+    font-weight: 700;
     letter-spacing: 0.01em;
     padding: 0.65em 0 0.6em 0;
-    width: calc(60vw / 4);
+    width: calc((70vw - 36pt) / 4);
     margin-top: 0.8vmax;
     text-align: center;
 
@@ -701,7 +673,7 @@ iframe {
     width: max(17vw, 400px);
     text-align: center;
     top: 3.7em;
-    font-family: 'Poppins';
+    font-family: 'Neuton';
     font-weight: 700;
     font-size: 1.5em;
 }
@@ -743,7 +715,7 @@ iframe {
     position: relative;
     display: inline-block;
 
-    font-family: 'M PLUS 1';
+    font-family: 'ZEN KAKU GOTHIC NEW';
     font-weight: 700;
     color: #fff;
     line-height: 1.3em;
@@ -797,7 +769,7 @@ iframe {
 }
 
 #credit h1 {
-    font-family: 'Poppins';
+    font-family: 'Neuton';
     font-weight: 600;
     color: #DD66AA;
     font-size: 0.1em;
@@ -823,7 +795,7 @@ iframe {
     margin: 6em 0 0;
     text-align: center;
 
-    font-family: 'Poppins';
+    font-family: 'Neuton';
     font-weight: 400;
     color: #fff;
     font-size: 8pt;
@@ -838,7 +810,7 @@ iframe {
 }
 
 #footer .copyright li h1{
-    font-family: 'Poppins';
+    font-family: 'Neuton';
     font-weight: 700;
     color: #fff;
     font-size: 1.2em;
@@ -935,15 +907,16 @@ header {
     font-size: 10pt;
 }
 
-#info {
+/*
+#info
     padding: 20vh 19.5vw 20vh 19.5vw;
-}
-
+*/
+/* 
 .sitebutton {
     font-size: 12pt;
     width: calc((60vw - 30pt) / 4);
     margin-right: 10pt;
-}
+} */
 
 .caption-style .caption-text {
     top: 2em;
@@ -961,25 +934,13 @@ header {
     width: 100vw;
 }
 
-#aki-logo {
-    display: block;
-    position: absolute;
-    width: 40pt;
-    height: auto;
-    top: auto;
-    bottom: 15vw;
-    right: 7vw;
-    transform: none;
-    font-size: 2vmax;
-}
-
 #banner .container {
     top: auto;
     bottom: 15vw;
     left: 7vw;
     transform: none;
 
-    text-shadow: 0 0 5pt #404060;
+    text-shadow: 0 0 5pt #19102D;
 }
 
 section {
@@ -1025,7 +986,7 @@ header ul {
     z-index: 10002;
     height: auto;
     width: calc(100vw - 2rem);
-    background: #404060;
+    background: #19102D;
 }
 
 header li {
@@ -1096,7 +1057,7 @@ header nav {
 }
 
 .out-header {
-    background: #404060 !important;
+    background: #19102D !important;
 }
 
 input {
