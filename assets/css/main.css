@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Neuton:200,400,700|Neuton:400,600,700|Playfair+Display:400,600|Zen+Kaku+Gothic+New:300,500,700&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Neuton:200,400,700,700|Playfair+Display:400,600|Zen+Kaku+Gothic+New:300,500,700&display=swap);
 
 /* Reset */
 
@@ -328,6 +328,7 @@ input {
     font-size: 0.9vw;
     letter-spacing: 0.05em;
     word-break: keep-all;
+    overflow-wrap: break-word;
 }
 
 .video {
@@ -432,6 +433,8 @@ iframe {
     padding: 8vw 15vw 0 15vw;
     height: auto;
     text-align: center;
+
+    font-size: 5vmin;
 }
 
 #info main {
@@ -467,7 +470,7 @@ iframe {
     font-family: 'Neuton';
     font-weight: 600;
     color: #DDBCAB;
-    font-size: 0.8vmax;
+    font-size: 0.5em;
     padding-top: 2.2em;
     text-align: left;
 }
@@ -479,20 +482,18 @@ iframe {
 }
 
 #info h2 {
-    display: inline-block;
     font-family: 'Zen Kaku Gothic New';
     font-weight: 700;
     color: #fff;
-    font-size: 2vmax;
+    font-size: 1em;
     line-height: 1.3em;
-    width: max-content;
 }
 
 #info h3 {
     font-family: 'ZEN KAKU GOTHIC NEW';
     color: #fff;
     font-weight: 700;
-    font-size: 2vmax;
+    font-size: 1em;
     line-height: 1.3em;
 }
 
@@ -512,7 +513,7 @@ iframe {
     width: 70vw;
 }
 
-.sitebutton {
+#info  .sitebutton {
     display: inline-block;
 
     font-size: 12pt;
@@ -531,27 +532,28 @@ iframe {
     transition: all 0.5s;
 }
 
-.sitebutton.emptylink {
+#info  .sitebutton.emptylink {
     border: 1.5px solid #bebebe;
     color: #bebebe;
     pointer-events: none;
     cursor: default;
 }
 
-.sitebutton.emptylink span {
+#info  .sitebutton.emptylink span {
     font-size: 0;
 }
 
-.sitebutton.emptylink span::before{
+#info  .sitebutton.emptylink span::before{
     position: relative;
     display: inline;
     content: "TBA";
-    font-size: 12pt !important;
+    font-size: 11pt !important;
+    transform: translateY(0.1em);
     margin-right: -9px;
 }
 
-.sitebutton.emptylink:active,
-.sitebutton.emptylink:hover {
+#info  .sitebutton.emptylink:active,
+#info  .sitebutton.emptylink:hover {
     color: #bebebe;
     border-color: #bebebe;
     text-decoration: none;
@@ -559,12 +561,12 @@ iframe {
     box-shadow: none;
 }
 
-.sitebutton sub {
+#info  .sitebutton sub {
     font-size: 0.75em;
 }
 
-.sitebutton:active,
-.sitebutton:hover {
+#info  .sitebutton:active,
+#info  .sitebutton:hover {
     text-decoration: none;
     color: #000;
     border-color: #DDBCAB;
@@ -572,7 +574,7 @@ iframe {
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
 }
 
-.sitebutton span {
+#info  .sitebutton span {
     display: inline-block;
     position: relative;
     padding-right: 0;
@@ -580,7 +582,7 @@ iframe {
     transition: padding-right 0.5s;
 }
 
-.sitebutton span::after {
+#info  .sitebutton span::after {
     content: ' ';
     position: absolute;
     top: 0px;
@@ -599,13 +601,13 @@ iframe {
     transform: rotate(-135deg);
 }
 
-.sitebutton:active span,
-.sitebutton:hover span {
+#info  .sitebutton:active span,
+#info  .sitebutton:hover span {
     padding-right: 20px;
 }
 
-.sitebutton:active span::after,
-.sitebutton:hover span::after {
+#info  .sitebutton:active span::after,
+#info  .sitebutton:hover span::after {
     transition: opacity 0.5s, top 0.5s, right 0.5s;
     opacity: 1;
     border-color: #000;
@@ -724,6 +726,11 @@ iframe {
     transition: all 0.2s;
 }
 
+#credit .main-composer {
+    font-size: 1.5em;
+}
+
+
 #credit a:after {
     content: "";
     position: absolute;
@@ -796,8 +803,8 @@ iframe {
     margin: 6em 0 0;
     text-align: center;
 
-    font-family: 'Neuton';
-    font-weight: 400;
+    font-family: 'Zen Kaku Gothic New';
+    font-weight: 300;
     color: #fff;
     font-size: 8pt;
 }
@@ -820,7 +827,7 @@ iframe {
 /* ----------  media screen  ---------- */
 
 
-@media (min-width: 2601px) {
+@media screen and (min-width: 2601px) {
 
 title {
     margin: 0 auto max(10vh, 20pt) auto;
@@ -835,7 +842,7 @@ title {
 }
 
 
-.sitebutton {
+#info  .sitebutton {
     font-size: 1.5vmin;
     width: calc((60vw - 60pt) / 4);
 }
@@ -859,7 +866,7 @@ title {
 
 }
 
-@media (min-width: 2001px) and (max-width: 2600px) {
+@media screen and (min-width: 2001px) and (max-width: 2600px) {
 
 title {
     margin: 0 auto max(10vh, 20pt) auto;
@@ -892,14 +899,14 @@ header {
     font-size: 16pt;
 }
 
-.sitebutton {
+#info  .sitebutton {
     font-size: 20pt;
     padding: 0.45em 0 0.4em 0;
     width: calc((60vw - 30pt) / 4);
 }
 
-.sitebutton.emptylink span::before{
-    font-size: 20pt !important;
+#info  .sitebutton.emptylink span::before{
+    font-size: 0.8em !important;
 }
 
 .caption-style {
@@ -910,8 +917,18 @@ header {
     font-size: 1.5vw;
 }
 
+#credit h1 {
+    margin-top: 5em;
+    font-size: 0.6em;
+}
+
+.credit-info:first-child{
+    margin: 0;
+}
+
 .caption-style .caption-text {
 	top: 2.75em;
+
 }
 
 }
@@ -929,24 +946,13 @@ header {
     align-items: flex-end;
 }
 
-/*
-#info
-    padding: 20vh 19.5vw 20vh 19.5vw;
-*/
-/* 
-.sitebutton {
-    font-size: 12pt;
-    width: calc((60vw - 30pt) / 4);
-    margin-right: 10pt;
-} */
-
 .caption-style .caption-text {
     top: 2em;
 }
 
 }
 
-@media (pointer:coarse) {
+@media screen and (pointer:coarse) {
 
 #banner {
     background: url(images/background-mobile.jpg) no-repeat;
@@ -975,7 +981,6 @@ section {
     padding: auto 5vw;
 }
 
-
 #about .container {
     display: flex;
     flex-direction: column;
@@ -1002,16 +1007,15 @@ title {
     width: 80vw;
     font-size: 5vmin;
     padding: 0.4em 0.7em;
-    margin :  0 auto max(10vh, 20pt) auto;
+    margin: max(3vh, 10pt) auto max(3vh, 10pt) auto;
 }
 
-
 #about title {
-    margin :  10vh auto max(10vh, 20pt) auto;
+    margin :  10vh auto max(10vh, 10pt) auto;
 }
 
 #credit title {
-    margin :  0 auto max(3vh, 20pt) auto;
+    margin :  0 auto max(3vh, 10pt) auto;
 }
 
 /* Header */
@@ -1139,7 +1143,7 @@ input {
 #about h2 {
     font-size: 3vw;
     width: 80vw;
-    text-align: justify;
+    text-align: center;
 }
 
 #catchphrase {
@@ -1154,7 +1158,7 @@ input {
 }
 
 #tracklist {
-    font-size: 3vw;
+    font-size: 3.6vw
 }
 
 #tracklist fieldset {
@@ -1172,12 +1176,13 @@ input {
     min-width: 80vw;
 }
 
-
 /* Information */
 
 #info {
     padding: 0 10vw 0 10vw;
     height: auto;
+
+    font-size: max(15pt,6vw);
 }
 
 #info main {
@@ -1187,7 +1192,7 @@ input {
 
 #info #album-logo {
     width: 80vw;
-    margin: 3em 0;
+    margin: 1.5em 0 1em 0;
 }
 
 #info .flex-container {
@@ -1195,11 +1200,6 @@ input {
     flex-direction: column;
     justify-content: space-between;
 }
-
-#info .field {
-    text-align: center;
-}
-
 
 .info-main {
     display: inline-block;
@@ -1209,19 +1209,12 @@ input {
     margin-top: 5pt;
 }
 
-#info i {
-    font-size: 8vw;
-}
-
 #info .field {
     margin-right: 0;
 }
 
 #info h1 {
-    font-size: max(1vw, 10pt);
-    padding-top: 0;
     width: 80vw;
-    padding-top: 0.2em;
     text-align: center;
 }
 
@@ -1229,13 +1222,9 @@ input {
     padding-top: 15pt;
 }
 
-#info h2 {
-    font-size: 18pt;
+#info h2, #info h3{
     text-align: center;
-}
-
-#info h3 {
-    font-size: 20pt;
+    line-height: 1.3em;
 }
 
 #info .info-location {
@@ -1255,11 +1244,15 @@ input {
     margin-top: 3rem;
 }
 
-.sitebutton {
+#info  .sitebutton {
     width: calc(100vw - 20vw);
-    font-size: 15pt;
-    padding: 1em 0;
+    font-size: max(10pt,5vw);
 }
+
+#info  .sitebutton.emptylink span::before{
+    font-size: max(8pt,4.5vw) !important;
+}
+
 
 .caption-style {
     width: 80vw;
@@ -1291,7 +1284,7 @@ input {
 #credit {
     padding: 6rem 10vw 3rem 10vw;
     text-align: center;
-    font-size: 3.5vw;
+    font-size: 4vw;
 }
 
 .credit-info {
@@ -1305,18 +1298,18 @@ input {
 
 #credit h1 {
     font-size: 0.5em;
-    margin-top: 5em;
+    margin-top: 4em;
 }
 
 /* Footer */
 
 #footer {
-    height: 70pt;
+    height: auto;
 }
 
 #footer .copyright {
-    margin: 3em 0 0;
-    font-size: 6pt;
+    margin: 3em 0 5vh 0;
+    font-size: 2.5vw;
 }
 
 #footer .copyright h1::after {
@@ -1335,7 +1328,7 @@ input {
 }
 
 
-@media (min-width: 481px) and (max-width: 1000px) {
+@media screen and (min-width: 481px) and (max-width: 1000px) {
 
 nav {
     display: none;
