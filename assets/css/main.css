@@ -81,7 +81,7 @@ html {
 
 body {
     background: url(images/background-texture.jpg) repeat center center;
-    background-size: 300px auto;
+    background-size: 30vw auto;
     background-attachment: fixed;
 }
 
@@ -161,7 +161,7 @@ title {
     font-size: 3vmin;
     padding: 0.5em 1em;
     width: 70vw;
-    margin: 20pt auto;
+    margin: max(10vh, 20pt) auto;
     text-align: left;
 }
 
@@ -290,7 +290,7 @@ input {
     background: linear-gradient(to bottom, #19102d, rgba(0,0,0,0));
     list-style-type: none;
     padding: 8vw 15vw 5vw 15vw;
-    min-height: 100vh;
+    min-height: min(1080px, 100vh);
     width: 100%;
     text-align: center;
     margin-top: 100vh;
